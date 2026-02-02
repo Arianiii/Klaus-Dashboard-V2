@@ -5,8 +5,10 @@
         { "id": "task-3", "key": "add_task_instruction", "text": null, "date": "2026-02-01" }
     ],
     "inprogress-column": [
-        { "id": "task-4", "text": "اتصال به داشبورد و آماده‌سازی برای ثبت فعالیت‌ها", "key": null, "date": "2026-02-01" }
+        { "id": "task-5", "text": "اتصال به داشبورد V2 برای ثبت فعالیت‌های آینده", "key": null, "date": "2026-02-01" }
     ],
-    "done-column": [],
+    "done-column": [
+        { "id": "task-4", "text": "ساخت و فعال‌سازی داشبورد جدید (V2)", "key": null, "date": "2026-02-01" }
+    ],
     "archived-column": []
 }
