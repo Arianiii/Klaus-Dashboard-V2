@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaus Dashboard V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-pic-container">
+                    <img src="profile.gif" alt="Klaus Profile Picture" class="profile-pic">
+                </div>
+                <h2 data-key="klaus_title">کلاوس</h2>
+                <div class="status-container">
+                    <span class="status-indicator"></span>
+                    <span data-key="status_online">آنلاین</span>
+                </div>
+                <p class="ready-status" data-key="ready_for_tasks">آماده برای تسک‌ها</p>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1 data-key="dashboard_title">داشبورد کلاوس V2</h1>
+                <div class="language-switcher">
+                    <a href="#" onclick="setLanguage('fa')">فارسی</a> |
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                </div>
+            </header>
+            <div class="kanban-board">
+                <div class="column" id="todo-column">
+                    <h3><i data-feather="list"></i><span data-key="todo_column">انجام‌ نشده</span></h3>
+                    <div class="cards-container"></div>
+                    <button class="add-card-btn"><i data-feather="plus"></i> <span data-key="add_a_card">افزودن کارت</span></button>
+                </div>
+                <div class="column" id="inprogress-column">
+                    <h3><i data-feather="loader"></i><span data-key="inprogress_column">در حال انجام</span></h3>
+                    <div class="cards-container"></div>
+                </div>
+                <div class="column" id="done-column">
+                    <h3><i data-feather="check-circle"></i><span data-key="done_column">انجام ‌شده</span></h3>
+                    <div class="cards-container"></div>
+                </div>
+                <div class="column" id="archived-column">
+                    <h3><i data-feather="archive"></i><span data-key="archived_column">بایگانی ‌شده</span></h3>
+                    <div class="cards-container"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3 data-key="add_new_task_title">اضافه کردن تسک جدید</h3>
+            <input type="text" id="taskInput" placeholder="عنوان تسک..." data-key="task_input_placeholder">
+            <button id="saveTaskBtn" data-key="save_task_btn">ذخیره</button>
+            <button id="closeModalBtn" data-key="close_modal_btn">انصراف</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
